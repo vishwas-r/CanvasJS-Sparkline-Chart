@@ -1,4 +1,4 @@
-# CanvasJS Sparline Chart
+# CanvasJS Sparkline Chart
 
 This is a plugin for CanvasJS Charts that allows you to convert regular chart with axis into sparkline chart by hiding axis-lines, gridlines, axis labels, etc.
 
