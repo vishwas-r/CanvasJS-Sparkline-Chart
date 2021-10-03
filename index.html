@@ -1,0 +1,195 @@
+<html>
+
+<head>
+<style>
+body {
+	width: 75%;
+	margin: auto;
+}
+</style>
+<script type="text/javascript">
+window.onload = function() {
+	var chart1 = new CanvasJS.Chart("chartContainer1", {
+		theme: "light2", // "light1", "dark1", "dark2"
+		animationEnabled: true,
+		data: [{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "line",
+			dataPoints: [{
+				label: "apple",
+				y: 10
+			}, {
+				label: "orange",
+				y: 15
+			}, {
+				label: "banana",
+				y: 25
+			}, {
+				label: "mango",
+				y: 30
+			}, {
+				label: "grape",
+				y: 28
+			}]
+		}]
+	});
+	
+	var chart2 = new CanvasJS.Chart("chartContainer2", {
+		theme: "light2", // "light1", "dark1", "dark2"
+		animationEnabled: true,
+		data: [{        
+		  type: "line",
+		  dataPoints: [
+			{ x: 10, y: 21 },
+			{ x: 20, y: 25 },
+			{ x: 30, y: 20 },
+			{ x: 40, y: 25 },
+			{ x: 50, y: 27 },
+			{ x: 60, y: 28 },
+			{ x: 70, y: 28 },
+			{ x: 80, y: 24 },
+			{ x: 90, y: 26 }      
+		  ]
+		}, {        
+		  type: "line",
+		  dataPoints: [
+			{ x: 10, y: 31 },
+			{ x: 20, y: 35 },
+			{ x: 30, y: 30 },
+			{ x: 40, y: 35 },
+			{ x: 50, y: 35 },
+			{ x: 60, y: 38 },
+			{ x: 70, y: 38 },
+			{ x: 80, y: 34 },
+			{ x: 90, y: 44 }      
+		  ]
+		}, {        
+		  type: "line",
+		  dataPoints: [
+			{ x: 10, y: 45 },
+			{ x: 20, y: 50 },
+			{ x: 30, y: 40 },
+			{ x: 40, y: 45 },
+			{ x: 50, y: 45 },
+			{ x: 60, y: 48 },
+			{ x: 70, y: 43 },
+			{ x: 80, y: 41 },
+			{ x: 90, y: 28 }      
+		  ]
+		}, {        
+		  type: "line",
+		  dataPoints: [
+			{ x: 10, y: 71 },
+			{ x: 20, y: 55 },
+			{ x: 30, y: 50 },
+			{ x: 40, y: 65 },
+			{ x: 50, y: 95 },
+			{ x: 60, y: 68 },
+			{ x: 70, y: 28 },
+			{ x: 80, y: 34 },
+			{ x: 90, y: 14 }      
+		  ]
+		}]
+	});
+	
+	var chart3 = new CanvasJS.Chart("chartContainer3", {
+		theme: "light2", // "light1", "dark1", "dark2"
+		animationEnabled: true,
+		data: [{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "column",
+			dataPoints: [{
+				label: "apple",
+				y: 10
+			}, {
+				label: "orange",
+				y: 15
+			}, {
+				label: "banana",
+				y: 25
+			}, {
+				label: "mango",
+				y: 30
+			}, {
+				label: "grape",
+				y: 28
+			}]
+		}]
+	});
+	
+	var chart4 = new CanvasJS.Chart("chartContainer4", {
+		theme: "light2", // "light1", "dark1", "dark2"
+		animationEnabled: true,
+		data: [{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "bar",
+			dataPoints: [{
+				label: "apple",
+				y: 10
+			}, {
+				label: "orange",
+				y: 15
+			}, {
+				label: "banana",
+				y: 25
+			}, {
+				label: "mango",
+				y: 30
+			}, {
+				label: "grape",
+				y: 28
+			}]
+		}]
+	});
+	
+	chart1.render();
+	chart2.render();
+	chart3.render();
+	chart4.render();
+	
+	chart1.renderSparkline();
+	chart2.renderSparkline();
+	chart3.renderSparkline();
+	chart4.renderSparkline();
+}
+</script>
+</head>
+
+<body>
+	<h1 id="exportcanvasjschartdataascsv">Export CanvasJS Chart Data as CSV</h1>
+	<p>This plugin allows you to convert <a href="https://canvasjs.com/" target="_blank">CanvasJS</a> Charts into sparkline charts. Check out <a href="https://github.com/vishwas-r/CanvasJS-Sparkline-Chart">Github Repository</a> for more info / examples.</p>
+	<h4 id="howtouse">How to Use?</h4>
+	<ul>
+		<li>Create and Render CanvasJS Chart</li>
+		<li>Call renderSparkline method</li>
+	</ul>
+	<pre><code>var chart = new CanvasJS.Chart("chartContainer", {
+    .
+    .
+    .
+    //Chart Options
+    .
+    .
+    .
+});
+chart.render();
+
+chart.renderSparkline();
+</code></pre>
+	<h4>Live Example</h4>
+	<p>Example 1:</p>
+	<div id="chartContainer1" style="height: 360px; width: 60%; border: 1px solid black;"></div>
+	<br/>
+	<p>Example 2:</p>
+	<div id="chartContainer2" style="height: 360px; width: 60%; border: 1px solid black;"></div>
+	<br/>
+	<p>Example 3:</p>
+	<div id="chartContainer3" style="height: 360px; width: 60%; border: 1px solid black;"></div>
+	<br/>
+	<p>Example 2:</p>
+	<div id="chartContainer4" style="height: 360px; width: 60%; border: 1px solid black;"></div>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+	<script src="dist/canvasjs.sparkline.min.js"> </script>
+</body>
+
+</html>
