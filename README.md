@@ -25,5 +25,5 @@ chart.renderSparkline();
 ```
 
 ##### Note: 
-- Plugin was last tested with **CanvasJS Chart v3.4.2**
+- Plugin was last tested with **CanvasJS Chart v3.4.4GA**
 - This plugin requires you to have CanvasJS License. Please visit **[CanvasJS](https://canvasjs.com/license/)** for more info.
