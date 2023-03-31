@@ -7,6 +7,26 @@ CanvasJS is built from ground up for high performance data visualization and can
 
 
 ### How to Use?
+
+### Importing Script
+Import the CanvasJS & CanvasJS Toggle FullScreen scritps
+```
+/* HTML Script Tag */
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvasjs-sparkline-chart/dist/canvasjs.sparkline.min.js"></script>
+
+/* or */
+import CanvasJS from './canvasjs.min';
+window.CanvasJS = CanvasJS;
+require('canvasjs-technical-indicators');
+
+/* React */
+import CanvasJSReact from './canvasjs.react';
+window.CanvasJS = CanvasJSReact.CanvasJS;
+require('canvasjs-technical-indicators');
+```
+
+### Render chart & call renderSparkline method
 - Create and Render CanvasJS Chart
 - Call renderSparkline method
 
@@ -23,7 +43,9 @@ var chart = new CanvasJS.Chart("chartContainer", {
 chart.render();
 chart.renderSparkline();
 ```
+In case of react app, get the reference of the chart & call the method inside ComponentDidMount.
+
 
 ##### Note: 
-- Plugin was last tested with **CanvasJS Chart v3.6.7GA**
+- Plugin was last tested with **CanvasJS Chart v3.7.5GA**
 - This plugin requires you to have CanvasJS License. Please visit **[CanvasJS](https://canvasjs.com/license/)** for more info.
