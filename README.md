@@ -18,12 +18,12 @@ Import the CanvasJS & CanvasJS Toggle FullScreen scritps
 /* or */
 import CanvasJS from './canvasjs.min';
 window.CanvasJS = CanvasJS;
-require('canvasjs-technical-indicators');
+require('canvasjs-sparkline-chart');
 
 /* React */
 import CanvasJSReact from './canvasjs.react';
 window.CanvasJS = CanvasJSReact.CanvasJS;
-require('canvasjs-technical-indicators');
+require('canvasjs-sparkline-chart');
 ```
 
 ### Render chart & call renderSparkline method

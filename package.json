@@ -1,6 +1,6 @@
 {
   "name": "canvasjs-sparkline-chart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a plugin for CanvasJS Charts that allows you to convert regular chart with axis into sparkline chart by hiding axis-lines, gridlines, axis labels, etc.",
   "main": "dist/canvasjs.sparkline.min.js",
   "repository": {
